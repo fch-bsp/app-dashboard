@@ -1,0 +1,139 @@
+
+# # #                           Criação das permissões RBAC só a nivel de NAMESPACE 
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   name: user-dashboard  ## ==> kubectl get all -o yaml | grep serviceAccount
+# --- 
+
+# # Criação REGRA-ROLE  via RBAC a nivel de NAMESPACE 
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: Role
+# metadata:
+#   name: dashboard-role
+# rules:
+# - apiGroups: [""] # api ex: v1 / appsv1 etc...==> kubectl api-resources | grep v1   
+#   resources: ["namespaces", "pods", "services"] # QUAL OBJETOS VÃO ACESSAR 
+#   verbs: ["get", "watch", "list"] # QUAL AÇÃO ==> OBTER ==> OBSERVAR ==> LISTAR PODE TER ( CREATE PATH DELETE UPDATE )
+# # - apiGroups: ["apps"] # ==>  kubectl api-resources | grep deployment
+# #   resources: ["deployments"] 
+# #   verbs: ["get", "watch", "list"] 
+# --- 
+# # QUAL ServiceAccount vai acessar Role 
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: RoleBinding
+# metadata:
+#   name: dashboard-reader-bind
+# subjects: # Para quem vai Dar permissão a Role ==> PODERIA SER USER 
+# - kind: ServiceAccount
+#   name: user-dashboard
+# roleRef: # Qual é Role vai link com user
+#   kind: Role
+#   name: dashboard-role
+#   apiGroup: rbac.authorization.k8s.io  
+
+# --- 
+
+
+
+
+
+
+   
+# #                           Criação das permissões via RBAC a nivel de GLOBAL FORA DO NAMESPACE
+
+
+################                                            ?ns=vote                                                  ############
+
+## ServiceAccount da aplicação  ==> kubectl get all -o yaml | grep serviceAccount
+
+
+
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   name: user-dashboard
+# --- 
+
+# ##Criação das permissões via RBAC a nivel global  
+
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: ClusterRole
+# metadata:
+#   name: dashboard-role
+# rules:
+# - apiGroups: [""] # api ex: v1 /  catalog.cattle.io/v1 etc...==> kubectl api-resources | grep v1   
+#   resources: ["namespaces", "pods", "services"] # QUAL OBJETOS VÃO ACESSAR 
+#   verbs: ["get", "watch", "list"] # QUAL AÇÃO ==> OBTER ==> OBSERVAR ==> LISTAR PODE TER ( CREATE PATH DELETE UPDATE )
+# # - apiGroups: ["apps"] # ==>  kubectl api-resources | grep deployment
+# #   resources: ["deployments"] 
+# #   verbs: ["get", "watch", "list"] 
+# --- 
+
+# # Acesso ao  ServiceAccount que vai acessar regra de Role 
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: ClusterRoleBinding
+# metadata:
+#   name: dashboard-reader-bind
+# subjects: # Para quem vai Dar permissão a Role ==> PODERIA SER USER 
+# - kind: ServiceAccount
+#   name: user-dashboard
+#   namespace: default
+# roleRef: # Qual é Role vai link com user
+#   kind: ClusterRole
+#   name: dashboard-role
+#   apiGroup: rbac.authorization.k8s.io  
+
+
+################  ?ns=  ############
+
+
+
+
+
+
+
+## deployment ==>> aplicação Dashboard
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-dashboard-deploy
+spec:  
+  selector:
+    matchLabels:
+      app: k8s-dashboard
+  template:
+    metadata:
+      labels:
+        app: k8s-dashboard
+    spec:
+      # serviceAccount: user-dashboard #   PRIMEIRO ==> especificar ==> kubectl get all -o yaml | grep serviceAccount
+      containers:
+      - name: k8s-dashboard
+        image: kubedevio/k8s-dashboard
+        # imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80   
+        env:
+          - name: ASPNETCORE_ENVIRONMENT 
+            value: "Development"
+--- 
+
+
+## service ==>> aplicação Dashboard
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-dashboard-service
+spec:
+  selector:
+    app: k8s-dashboard        
+  ports:
+  - port: 80
+    targetPort: 80
+  type: NodePort
