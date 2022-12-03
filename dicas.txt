@@ -4,7 +4,5 @@ k3d cluster create labs --servers 1 --agents 2 -p "8080:3000@loadbalancer"
 
 
 kubectl get all -o yaml | grep serviceAccount
-    serviceAccount: default
-    serviceAccountName: default
-        - serviceAccountToken:
+
 
