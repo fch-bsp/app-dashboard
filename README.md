@@ -5,10 +5,12 @@
 ![Captura de tela de 2022-12-04 09-19-01](https://user-images.githubusercontent.com/102867453/205490006-e4f8a8bb-52f8-4dd8-94f5-c65e35c05bdb.png)
 
 ---
+
+
 ## Negar - Acesso: "Forbidden"
 
 ![Captura de tela de 2022-12-04 09-23-37](https://user-images.githubusercontent.com/102867453/205490220-c1a20703-c438-428a-98ed-e409955ca030.png)
-
+## Criação do arquivos de manifesto para o acesso ao cluster:
 #### Entendimento sobre ServiceAccount
 ![Captura de tela de 2022-12-04 10-59-43](https://user-images.githubusercontent.com/102867453/205494832-8c16154e-08e7-465f-ac10-4aee5f9f517c.png)
 
@@ -23,7 +25,7 @@
 
 ---
 
-## Criação do arquivos de manifesto para o acesso ao cluster:
+
 
 #### Acesso aos Pods:
 
