@@ -12,7 +12,9 @@
 #### Criação do ServiceAccount 
 
 
-![Captura de tela de 2022-12-04 10-46-32](https://user-images.githubusercontent.com/102867453/205494378-e3af0174-0994-4108-8bdd-6099ebc7bbbb.png)
+![Captura de tela de 2022-12-04 10-58-01](https://user-images.githubusercontent.com/102867453/205494740-af12961d-c68d-4b6b-b850-65ffa98190aa.png)
+
+
 ---
 
 #### Acesso aos Pods:
