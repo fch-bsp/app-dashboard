@@ -22,6 +22,20 @@
 #### Acesso aos Services:
 ![Captura de tela de 2022-12-04 10-51-18](https://user-images.githubusercontent.com/102867453/205494412-9f202c06-6e06-4155-9d95-173c6d441d8b.png)
 
+#### Acesso: "Forbidden" no Deployment:
+
+![Captura de tela de 2022-12-04 09-23-37](https://user-images.githubusercontent.com/102867453/205490220-c1a20703-c438-428a-98ed-e409955ca030.png)
+
+#### Manifesto habilitando Deployment 
+
+![Captura de tela de 2022-12-04 10-54-24](https://user-images.githubusercontent.com/102867453/205494572-83c6e60e-17e1-46b5-ace9-f7e620666030.png)
+
+
+#### Acesso aos Deployment:
+
+![Captura de tela de 2022-12-04 10-55-52](https://user-images.githubusercontent.com/102867453/205494649-84a8ee79-0de7-466f-8c77-e997b61ad7fb.png)
+
+
 
 
 ## Criação do arquivos de manifesto para o acesso ao cluster:
