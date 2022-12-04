@@ -9,6 +9,14 @@
 
 ![Captura de tela de 2022-12-04 09-23-37](https://user-images.githubusercontent.com/102867453/205490220-c1a20703-c438-428a-98ed-e409955ca030.png)
 
+#### Criação do ServiceAccount 
+
+
+![Captura de tela de 2022-12-04 10-46-32](https://user-images.githubusercontent.com/102867453/205494378-e3af0174-0994-4108-8bdd-6099ebc7bbbb.png)
+
+![Captura de tela de 2022-12-04 10-45-47](https://user-images.githubusercontent.com/102867453/205494195-bed42f82-f00a-4062-9ef4-a49aceb80a3e.png)
+
+
 
 ## Criação do arquivos de manifesto para o acesso ao cluster:
 
