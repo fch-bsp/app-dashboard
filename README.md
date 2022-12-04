@@ -5,7 +5,7 @@
 ![Captura de tela de 2022-12-04 09-19-01](https://user-images.githubusercontent.com/102867453/205490006-e4f8a8bb-52f8-4dd8-94f5-c65e35c05bdb.png)
 
 ---
-## Negar - Acesso:
+## Negar - Acesso: "Forbidden"
 
 ![Captura de tela de 2022-12-04 09-23-37](https://user-images.githubusercontent.com/102867453/205490220-c1a20703-c438-428a-98ed-e409955ca030.png)
 
