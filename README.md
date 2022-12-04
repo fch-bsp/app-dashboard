@@ -9,6 +9,12 @@
 
 ![Captura de tela de 2022-12-04 09-23-37](https://user-images.githubusercontent.com/102867453/205490220-c1a20703-c438-428a-98ed-e409955ca030.png)
 
+#### Entendimento sobre ServiceAccount
+![Captura de tela de 2022-12-04 10-59-43](https://user-images.githubusercontent.com/102867453/205494832-8c16154e-08e7-465f-ac10-4aee5f9f517c.png)
+
+![Captura de tela de 2022-12-04 11-01-37](https://user-images.githubusercontent.com/102867453/205494940-64d4bc7d-027a-48b9-bb64-0dc84a262989.png)
+
+
 #### Criação do ServiceAccount 
 
 
