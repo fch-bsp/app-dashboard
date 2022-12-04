@@ -15,11 +15,11 @@
 ![Captura de tela de 2022-12-04 10-46-32](https://user-images.githubusercontent.com/102867453/205494378-e3af0174-0994-4108-8bdd-6099ebc7bbbb.png)
 ---
 
-#### Acesso ao Pods:
+#### Acesso aos Pods:
 
 ![Captura de tela de 2022-12-04 10-45-47](https://user-images.githubusercontent.com/102867453/205494195-bed42f82-f00a-4062-9ef4-a49aceb80a3e.png)
 
-#### Acesso ao Service:
+#### Acesso aos Services:
 ![Captura de tela de 2022-12-04 10-51-18](https://user-images.githubusercontent.com/102867453/205494412-9f202c06-6e06-4155-9d95-173c6d441d8b.png)
 
 
